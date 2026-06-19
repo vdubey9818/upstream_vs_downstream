@@ -18,12 +18,10 @@ Avg_Def = data[:,13]
 E_UD = data[:,14]
 E_UDef = data[:,15]
 # ----------------------------
-# Calculating gamma2
+# Calculating gamma 3
 # ----------------------------
 
-
-score2 = Avg_U*Avg_D*E_UD / E_UDef
-# score2 = Avg_U*Avg_D/E_UDef
+score2 = Avg_U*Avg_D/E_UDef
 
 # Normalize
 score2_norm = score2 / np.max(score2)
@@ -32,8 +30,7 @@ score2_norm = score2 / np.max(score2)
 # Plot
 # ----------------------------
 plt.figure(figsize=(8,6))
-bars= plt.bar(k_list[:8], score2_norm[:8], width=0.6, color='#BDB5D5')
-
+bars=plt.bar(k_list[:8], score2_norm[:8], width=0.6, color='#BDB5D5')
 
 # Add hatch only to maximum bar
 # ----------------------------
@@ -44,7 +41,7 @@ bars[max_idx].set_linewidth(2)
 #-----------------------------
 
 plt.xlabel(f"$k$", fontsize=40)
-plt.ylabel(f"$\gamma_2(k)$", fontsize=40)
+plt.ylabel(f"$\gamma_3(k)$", fontsize=40)
 
 
 

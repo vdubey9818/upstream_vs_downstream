@@ -35,8 +35,6 @@ bars=plt.bar(k_list[:16], score2_norm[:16], width=0.6, color='#BDB5D5')
 # ----------------------------
 max_idx = np.argmax(score2_norm)
 bars[max_idx].set_hatch('//')
-bars[5].set_hatch('//')
-bars[6].set_hatch('//')
 bars[max_idx].set_linewidth(2)
 
 #-----------------------------
