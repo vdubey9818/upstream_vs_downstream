@@ -21,7 +21,7 @@ E_UDef = data[:,15]
 # Calculating gamma 3
 # ----------------------------
 
-score2 = Avg_U*Avg_D/E_UDef
+score2 = Avg_U/E_UDef
 
 # Normalize
 score2_norm = score2 / np.max(score2)
@@ -41,7 +41,7 @@ bars[max_idx].set_linewidth(2)
 #-----------------------------
 
 plt.xlabel(f"$k$", fontsize=40)
-plt.ylabel(f"$\gamma_3(k)$", fontsize=40)
+plt.ylabel(f"$\gamma_1(k)$", fontsize=40)
 
 
 
